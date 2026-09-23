@@ -959,17 +959,34 @@ async function createBooking(button) {
 }
 
 /* ---------------------------------------------------------------- 实验台 */
+/* 每个场景用**它自己该用的日期**，而不是统一跟表单日期走。
+   这一点踩过坑：原先九个场景都用表单日期，结果
+   - 「查询超时」的商品预订窗口只有 45 天，表单选了 60 天后的日期时
+     会先撞上 BEYOND_BOOKING_WINDOW，根本走不到供应商超时那一层；
+   - 「预约提前期不足」在远日期下提前期永远够，直接返回可售。
+   于是九个场景实际只演示出五种形态，还多出两个重复的 NOT_ELIGIBLE。
+   日期策略：
+     form     跟随表单日期（多数场景）
+     soon     今天 +7 天，确保落在较窄的预订窗口内
+     tomorrow 明天，用于触发「提前期不足」 */
 const LAB_CASES = [
-  ['MOCK_PROD_AQUARIUM_TICKET',     0,  '正常可售'],
-  ['MOCK_PROD_THEMEPARK_EXPRESS',   0,  '供应商明确售罄'],
-  ['MOCK_PROD_KIDS_SCIENCE_TICKET', 0,  '供应商查询超时'],
-  ['MOCK_PROD_CASTLE_TICKET',       0,  '供应商返回 5xx'],
-  ['MOCK_PROD_SKY_DECK_TICKET',     0,  '供应商 200 但字段不全'],
-  ['MOCK_PROD_TRAIN_MUSEUM_TICKET', 0,  '商户在营状态未知'],
-  ['MOCK_PROD_NATURE_PARK_TICKET',  0,  '商户状态已过期（>5min）'],
-  ['MOCK_PROD_BRICK_CENTER_TICKET', 1,  '预约提前期不足'],
-  ['MOCK_PROD_CITY_PASS_2DAY',      0,  '通票：部分场馆停业但仍可售']
+  ['MOCK_PROD_AQUARIUM_TICKET',     'form',     '正常可售'],
+  ['MOCK_PROD_THEMEPARK_EXPRESS',   'form',     '供应商明确售罄'],
+  ['MOCK_PROD_KIDS_SCIENCE_TICKET', 'soon',     '供应商查询超时'],
+  ['MOCK_PROD_CASTLE_TICKET',       'form',     '供应商返回 5xx'],
+  ['MOCK_PROD_SKY_DECK_TICKET',     'form',     '供应商 200 但字段不全'],
+  ['MOCK_PROD_TRAIN_MUSEUM_TICKET', 'form',     '商户在营状态未知'],
+  ['MOCK_PROD_NATURE_PARK_TICKET',  'form',     '商户状态已过期（>5min）'],
+  ['MOCK_PROD_BRICK_CENTER_TICKET', 'tomorrow', '预约提前期不足'],
+  ['MOCK_PROD_CITY_PASS_2DAY',      'form',     '通票：部分场馆停业但仍可售']
 ];
+
+function labDate(strategy, formDate) {
+  const iso = (d) => d.toISOString().slice(0, 10);
+  if (strategy === 'tomorrow') return iso(new Date(Date.now() + 1 * 86400000));
+  if (strategy === 'soon')     return iso(new Date(Date.now() + 7 * 86400000));
+  return formDate;
+}
 
 $('lab-btn').addEventListener('click', async () => {
   const button = $('lab-btn');
@@ -980,9 +997,9 @@ $('lab-btn').addEventListener('click', async () => {
   const party = { adults: Number($('f-adults').value || 2),
                   children: ages.length, child_ages: ages.map(Number) };
 
-  const items = LAB_CASES.map(([productId, offset]) => ({
+  const items = LAB_CASES.map(([productId, strategy]) => ({
     product_id: productId,
-    travel_date: new Date(new Date(base).getTime() + offset * 86400000).toISOString().slice(0, 10)
+    travel_date: labDate(strategy, base)
   }));
 
   const result = await api('/v1/availability/queries', {
@@ -1003,7 +1020,8 @@ $('lab-btn').addEventListener('click', async () => {
     const advisories = (r.merchant_advisories || []).map((a) =>
       `<div class="muted" style="font-size:11.5px;margin-top:3px">⚠ ${esc(a.detail)}</div>`).join('');
     return `<tr>
-      <td>${esc(LAB_CASES[index] ? LAB_CASES[index][2] : '')}</td>
+      <td>${esc(LAB_CASES[index] ? LAB_CASES[index][2] : '')}
+        <div class="mono muted" style="font-size:11px">${esc(r.travel_date)}</div></td>
       <td>${stateTag(r.availability_state)}</td>
       <td><strong style="color:${r.bookable ? 'var(--good)' : 'var(--text-secondary)'}">
         ${r.bookable ? '可订' : '不可订'}</strong></td>
