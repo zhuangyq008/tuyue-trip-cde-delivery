@@ -1,0 +1,2252 @@
+[
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-09-23",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 88,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 27,
+    "temp_min_c": 19,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-09-24",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 9,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 29,
+    "temp_min_c": 21,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-09-25",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 73,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 31,
+    "temp_min_c": 23,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-09-26",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 15,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 28,
+    "temp_min_c": 20,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-09-27",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 68,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 27,
+    "temp_min_c": 19,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-09-28",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 83,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 31,
+    "temp_min_c": 23,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-09-29",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 2,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 31,
+    "temp_min_c": 23,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-09-30",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 3,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 31,
+    "temp_min_c": 23,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-01",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 56,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 23,
+    "temp_min_c": 15,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-02",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-03",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 8,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-04",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 88,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-05",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-06",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-07",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 12,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-08",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 4,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 23,
+    "temp_min_c": 15,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-09",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 81,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-10",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-11",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 23,
+    "temp_min_c": 15,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-12",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-13",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 62,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-14",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 57,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-15",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 25,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-16",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 19,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-17",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 3,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-18",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 26,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-19",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 33,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-20",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 9,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-21",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-22",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 90,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-23",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 12,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-24",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-25",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 65,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 25,
+    "temp_min_c": 17,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-26",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 14,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-10-27",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 19,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-28",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 72,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-10-29",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 90,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 21,
+    "temp_min_c": 13,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-10-30",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 9,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 24,
+    "temp_min_c": 16,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-10-31",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 65,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 22,
+    "temp_min_c": 14,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-01",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 59,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-02",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 62,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-03",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 89,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-04",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 9,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 19,
+    "temp_min_c": 11,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-05",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 15,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 19,
+    "temp_min_c": 11,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-06",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 89,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-07",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 56,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 16,
+    "temp_min_c": 8,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-08",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 16,
+    "temp_min_c": 8,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-09",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-10",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 80,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-11",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 67,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-12",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 61,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-13",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 17,
+    "temp_min_c": 9,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-14",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 14,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-15",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 17,
+    "temp_min_c": 9,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-16",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 85,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 16,
+    "temp_min_c": 8,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-17",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 7,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 19,
+    "temp_min_c": 11,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-11-18",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 87,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 17,
+    "temp_min_c": 9,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-19",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 3,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-20",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 6,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 19,
+    "temp_min_c": 11,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-21",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 17,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-22",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 19,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-23",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 7,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-24",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 10,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-25",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 64,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 17,
+    "temp_min_c": 9,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-26",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 14,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 16,
+    "temp_min_c": 8,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-27",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 26,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 19,
+    "temp_min_c": 11,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-11-28",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 60,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 16,
+    "temp_min_c": 8,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-11-29",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 18,
+    "temp_min_c": 10,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-11-30",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 35,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 20,
+    "temp_min_c": 12,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-01",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 2,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 13,
+    "temp_min_c": 6,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-02",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 80,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-03",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 16,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-04",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 59,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-05",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 25,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-06",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 61,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-07",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-08",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 60,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-09",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 13,
+    "temp_min_c": 6,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-10",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 86,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-11",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 9,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-12",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 72,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-13",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 12,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-14",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 83,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-15",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 15,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-16",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-17",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 95,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-18",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 16,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-19",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-20",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 0,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-21",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 72,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-22",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 34,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 13,
+    "temp_min_c": 6,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2026-12-23",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 60,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 13,
+    "temp_min_c": 6,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-24",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 89,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 13,
+    "temp_min_c": 6,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-25",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 26,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-26",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 82,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-27",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-28",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 8,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2026-12-29",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2026-12-30",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 7,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2026-12-31",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 30,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 14,
+    "temp_min_c": 7,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-01",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 83,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-02",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 95,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-01-03",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-04",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 82,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-05",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 22,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-06",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 31,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-07",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 81,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-08",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 59,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-01-09",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 14,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-01-10",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 5,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-11",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 65,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-12",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 15,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-13",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 59,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-14",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 24,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-01-15",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 3,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-16",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 95,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-17",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 29,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-18",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 70,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-19",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 94,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-20",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 65,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-21",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 15,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-22",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 93,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-23",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 80,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-01-24",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 2,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-25",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 10,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-26",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 71,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-01-27",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-28",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 57,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-01-29",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 70,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 7,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-30",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 18,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-01-31",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 28,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-01",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 26,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-02-02",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 10,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-02-03",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 66,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-04",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 30,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-05",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 34,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-02-06",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 6,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-07",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 21,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-02-08",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-02-09",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 80,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-02-10",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 86,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-11",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 11,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-12",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 30,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 10,
+    "temp_min_c": 3,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-02-13",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 10,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "sunny",
+    "condition_label": "MOCK_晴",
+    "date": "2027-02-14",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 13,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "cloudy",
+    "condition_label": "MOCK_多云",
+    "date": "2027-02-15",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 33,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-02-16",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 67,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 8,
+    "temp_min_c": 1,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "heavy_rain",
+    "condition_label": "MOCK_大雨",
+    "date": "2027-02-17",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 91,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 9,
+    "temp_min_c": 2,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-02-18",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 71,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 11,
+    "temp_min_c": 4,
+    "updated_at": "2026-09-23T06:00:00Z"
+  },
+  {
+    "condition": "light_rain",
+    "condition_label": "MOCK_小雨",
+    "date": "2027-02-19",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "precipitation_probability": 71,
+    "source": {
+      "name": "MOCK_第三方天气 API",
+      "refresh": "daily",
+      "type": "third_party_api"
+    },
+    "temp_max_c": 12,
+    "temp_min_c": 5,
+    "updated_at": "2026-09-23T06:00:00Z"
+  }
+]

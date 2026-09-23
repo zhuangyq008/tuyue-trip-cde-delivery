@@ -1,0 +1,24 @@
+[
+  {
+    "aliases": [
+      "大阪",
+      "Osaka",
+      "osaka",
+      "OSAKA"
+    ],
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.69,
+      "lng": 135.5
+    },
+    "country_code": "JP",
+    "country_name_zh": "MOCK_日本",
+    "currency": "JPY",
+    "destination_id": "MOCK_DEST_OSAKA",
+    "name_local": "MOCK_Osaka",
+    "name_zh": "大阪",
+    "settlement_currency": "CNY",
+    "timezone": "Asia/Tokyo",
+    "utc_offset_minutes": 540
+  }
+]

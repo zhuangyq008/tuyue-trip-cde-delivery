@@ -1,0 +1,174 @@
+[
+  {
+    "avg_temp_c": [
+      3,
+      9
+    ],
+    "best_for": [
+      "室内亲子",
+      "购物"
+    ],
+    "events": [
+      "MOCK_新年促销周"
+    ],
+    "month": 1,
+    "peak_level": "low"
+  },
+  {
+    "avg_temp_c": [
+      3,
+      10
+    ],
+    "best_for": [
+      "室内亲子"
+    ],
+    "events": [],
+    "month": 2,
+    "peak_level": "low"
+  },
+  {
+    "avg_temp_c": [
+      6,
+      14
+    ],
+    "best_for": [
+      "户外散步"
+    ],
+    "events": [
+      "MOCK_早春花季"
+    ],
+    "month": 3,
+    "peak_level": "shoulder"
+  },
+  {
+    "avg_temp_c": [
+      11,
+      20
+    ],
+    "best_for": [
+      "户外亲子",
+      "公园"
+    ],
+    "events": [
+      "MOCK_春季花期节"
+    ],
+    "month": 4,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      16,
+      25
+    ],
+    "best_for": [
+      "户外亲子"
+    ],
+    "events": [
+      "MOCK_五月长假"
+    ],
+    "month": 5,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      20,
+      28
+    ],
+    "best_for": [
+      "室内亲子"
+    ],
+    "events": [
+      "MOCK_梅雨季"
+    ],
+    "month": 6,
+    "peak_level": "shoulder"
+  },
+  {
+    "avg_temp_c": [
+      24,
+      33
+    ],
+    "best_for": [
+      "水族馆",
+      "室内"
+    ],
+    "events": [
+      "MOCK_夏日祭"
+    ],
+    "month": 7,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      25,
+      34
+    ],
+    "best_for": [
+      "室内避暑"
+    ],
+    "events": [
+      "MOCK_盂兰盆假期"
+    ],
+    "month": 8,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      21,
+      29
+    ],
+    "best_for": [
+      "户外亲子"
+    ],
+    "events": [
+      "MOCK_台风多发期"
+    ],
+    "month": 9,
+    "peak_level": "shoulder"
+  },
+  {
+    "avg_temp_c": [
+      15,
+      23
+    ],
+    "best_for": [
+      "户外亲子",
+      "主题乐园"
+    ],
+    "events": [
+      "MOCK_秋季万圣活动"
+    ],
+    "month": 10,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      10,
+      18
+    ],
+    "best_for": [
+      "户外亲子",
+      "红叶"
+    ],
+    "events": [
+      "MOCK_红叶季"
+    ],
+    "month": 11,
+    "peak_level": "peak"
+  },
+  {
+    "avg_temp_c": [
+      5,
+      12
+    ],
+    "best_for": [
+      "室内亲子",
+      "灯光节"
+    ],
+    "events": [
+      "MOCK_冬季灯光节"
+    ],
+    "month": 12,
+    "peak_level": "shoulder"
+  }
+]

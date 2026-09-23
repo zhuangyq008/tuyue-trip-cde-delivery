@@ -1,0 +1,3 @@
+# 运行期零第三方依赖：boto3/botocore 由 Lambda Python 3.12 运行时提供。
+# 刻意不引入 pydantic 等校验库 —— 字段校验需要产出 422 而非 400，
+# 自行实现（src/app/http/validation.py）反而更可控，且部署包更小、冷启动更快。

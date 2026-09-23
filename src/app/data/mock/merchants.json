@@ -1,0 +1,424 @@
+[
+  {
+    "address_mock": "MOCK_港区示例地址7-16",
+    "business_hours": {
+      "close": "20:00",
+      "last_entry": "19:00",
+      "open": "10:00"
+    },
+    "category": "aquarium",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.637,
+      "lng": 135.4
+    },
+    "merchant_id": "MOCK_MER_AQUARIUM",
+    "name_zh": "MOCK_大阪湾海洋馆运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 60
+    },
+    "poi_id": "MOCK_POI_AQUARIUM",
+    "product_ids": [
+      "MOCK_PROD_AQUARIUM_TICKET",
+      "MOCK_PROD_CITY_PASS_2DAY"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.7,
+      "review_count": 9124,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_MINATO"
+  },
+  {
+    "address_mock": "MOCK_港区示例地址7-17",
+    "business_hours": {
+      "close": "18:00",
+      "last_entry": "16:00",
+      "open": "10:00"
+    },
+    "category": "kids_indoor",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.645,
+      "lng": 135.435
+    },
+    "merchant_id": "MOCK_MER_BRICK_CENTER",
+    "name_zh": "MOCK_积木探索中心运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 30
+    },
+    "poi_id": "MOCK_POI_BRICK_CENTER",
+    "product_ids": [
+      "MOCK_PROD_BRICK_CENTER_TICKET"
+    ],
+    "rating": {
+      "grade": "B",
+      "overall": 4.2,
+      "review_count": 640,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_MINATO"
+  },
+  {
+    "address_mock": "MOCK_中央区示例地址9-19",
+    "business_hours": {
+      "close": "17:00",
+      "last_entry": "16:30",
+      "open": "09:00"
+    },
+    "category": "historic_site",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.639,
+      "lng": 135.501
+    },
+    "merchant_id": "MOCK_MER_CASTLE_PARK",
+    "name_zh": "MOCK_中央城址公园运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 68
+    },
+    "poi_id": "MOCK_POI_CASTLE_PARK",
+    "product_ids": [
+      "MOCK_PROD_CASTLE_TICKET",
+      "MOCK_PROD_CITY_PASS_2DAY"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.6,
+      "review_count": 816,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_CHUO"
+  },
+  {
+    "address_mock": "MOCK_港区示例地址1-17",
+    "business_hours": {
+      "close": "22:00",
+      "last_entry": "21:30",
+      "open": "10:00"
+    },
+    "category": "landmark",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.678,
+      "lng": 135.45
+    },
+    "merchant_id": "MOCK_MER_FERRIS_WHEEL",
+    "name_zh": "MOCK_港区海景摩天轮运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": "MOCK_设备年检暂停营业",
+      "source": "供应链系统",
+      "status": "SUSPENDED",
+      "status_age_seconds": 120
+    },
+    "poi_id": "MOCK_POI_FERRIS_WHEEL",
+    "product_ids": [
+      "MOCK_PROD_CITY_PASS_2DAY"
+    ],
+    "rating": {
+      "grade": "B",
+      "overall": 4.1,
+      "review_count": 862,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_MINATO"
+  },
+  {
+    "address_mock": "MOCK_中央区示例地址1-7",
+    "business_hours": {
+      "close": "23:00",
+      "last_entry": "22:30",
+      "open": "10:00"
+    },
+    "category": "food_district",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.671,
+      "lng": 135.51
+    },
+    "merchant_id": "MOCK_MER_FOOD_STREET",
+    "name_zh": "MOCK_中央区小吃街运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 171
+    },
+    "poi_id": "MOCK_POI_FOOD_STREET",
+    "product_ids": [],
+    "rating": {
+      "grade": "A",
+      "overall": 4.8,
+      "review_count": 858,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_CHUO"
+  },
+  {
+    "address_mock": "MOCK_中央区示例地址7-6",
+    "business_hours": {
+      "close": "23:59",
+      "last_entry": null,
+      "open": "00:00"
+    },
+    "category": "hotel",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.666,
+      "lng": 135.5
+    },
+    "merchant_id": "MOCK_MER_HOTEL_CHUO",
+    "name_zh": "MOCK_中央区家庭公寓酒店",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 50
+    },
+    "poi_id": null,
+    "product_ids": [
+      "MOCK_PROD_FAMILY_HOTEL_CHUO"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.5,
+      "review_count": 2044,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_CHUO"
+  },
+  {
+    "address_mock": "MOCK_北区示例地址2-2",
+    "business_hours": {
+      "close": "17:00",
+      "last_entry": "16:00",
+      "open": "09:30"
+    },
+    "category": "kids_museum",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.73,
+      "lng": 135.487
+    },
+    "merchant_id": "MOCK_MER_KIDS_SCIENCE",
+    "name_zh": "MOCK_儿童科学探索馆运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 75
+    },
+    "poi_id": "MOCK_POI_KIDS_SCIENCE",
+    "product_ids": [
+      "MOCK_PROD_KIDS_SCIENCE_TICKET"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.6,
+      "review_count": 1583,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_KITA"
+  },
+  {
+    "address_mock": "MOCK_吹田市示例地址3-9",
+    "business_hours": {
+      "close": "17:00",
+      "last_entry": "16:00",
+      "open": "09:30"
+    },
+    "category": "park",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.835,
+      "lng": 135.509
+    },
+    "merchant_id": "MOCK_MER_NATURE_PARK",
+    "name_zh": "MOCK_吹田生态公园运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": "MOCK_状态同步滞后",
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 2520
+    },
+    "poi_id": "MOCK_POI_NATURE_PARK",
+    "product_ids": [
+      "MOCK_PROD_NATURE_PARK_TICKET"
+    ],
+    "rating": {
+      "grade": "B",
+      "overall": 4.3,
+      "review_count": 527,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_SUITA"
+  },
+  {
+    "address_mock": "MOCK_北区示例地址1-18",
+    "business_hours": {
+      "close": "22:30",
+      "last_entry": "22:00",
+      "open": "09:30"
+    },
+    "category": "observation_deck",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.727,
+      "lng": 135.489
+    },
+    "merchant_id": "MOCK_MER_SKY_DECK",
+    "name_zh": "MOCK_北区空中观景台运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 176
+    },
+    "poi_id": "MOCK_POI_SKY_DECK",
+    "product_ids": [
+      "MOCK_PROD_CITY_PASS_2DAY",
+      "MOCK_PROD_SKY_DECK_TICKET"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.0,
+      "review_count": 795,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_KITA"
+  },
+  {
+    "address_mock": "MOCK_此花区示例地址6-8",
+    "business_hours": {
+      "close": "20:00",
+      "last_entry": "18:00",
+      "open": "09:00"
+    },
+    "category": "theme_park",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.654,
+      "lng": 135.425
+    },
+    "merchant_id": "MOCK_MER_THEMEPARK",
+    "name_zh": "MOCK_大阪影视主题乐园运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 45
+    },
+    "poi_id": "MOCK_POI_THEMEPARK",
+    "product_ids": [
+      "MOCK_PROD_THEMEPARK_1DAY",
+      "MOCK_PROD_THEMEPARK_EXPRESS"
+    ],
+    "rating": {
+      "grade": "S",
+      "overall": 4.8,
+      "review_count": 20431,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_KONOHANA"
+  },
+  {
+    "address_mock": "MOCK_北区示例地址9-17",
+    "business_hours": {
+      "close": "17:30",
+      "last_entry": "16:30",
+      "open": "10:00"
+    },
+    "category": "museum",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.693,
+      "lng": 135.516
+    },
+    "merchant_id": "MOCK_MER_TRAIN_MUSEUM",
+    "name_zh": "MOCK_铁道模型博物馆运营方",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": "MOCK_供应链系统同步失败",
+      "source": "供应链系统",
+      "status": "UNKNOWN",
+      "status_age_seconds": 90
+    },
+    "poi_id": "MOCK_POI_TRAIN_MUSEUM",
+    "product_ids": [
+      "MOCK_PROD_TRAIN_MUSEUM_TICKET"
+    ],
+    "rating": {
+      "grade": "B",
+      "overall": 4.4,
+      "review_count": 311,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_KITA"
+  },
+  {
+    "address_mock": "MOCK_中央区示例地址2-8",
+    "business_hours": {
+      "close": "23:00",
+      "last_entry": null,
+      "open": "05:00"
+    },
+    "category": "transfer",
+    "coordinates": {
+      "coordinates_mock": true,
+      "lat": 34.666,
+      "lng": 135.5
+    },
+    "merchant_id": "MOCK_MER_TRANSFER",
+    "name_zh": "MOCK_关西接送服务商",
+    "operating_status": {
+      "freshness_requirement_seconds": 300,
+      "note": null,
+      "source": "供应链系统",
+      "status": "OPEN",
+      "status_age_seconds": 35
+    },
+    "poi_id": null,
+    "product_ids": [
+      "MOCK_PROD_AIRPORT_TRANSFER"
+    ],
+    "rating": {
+      "grade": "A",
+      "overall": 4.6,
+      "review_count": 1290,
+      "source": "质量运营团队",
+      "updated_at": "2026-09-22T02:00:00Z"
+    },
+    "region_id": "MOCK_REG_CHUO"
+  }
+]

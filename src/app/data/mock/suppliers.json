@@ -1,0 +1,17 @@
+[
+  {
+    "contact_email": "alpha@example.com",
+    "name_zh": "MOCK_阿尔法票务",
+    "supplier_id": "MOCK_SUP_ALPHA"
+  },
+  {
+    "contact_email": "beta@example.com",
+    "name_zh": "MOCK_贝塔目的地服务",
+    "supplier_id": "MOCK_SUP_BETA"
+  },
+  {
+    "contact_email": "gamma@example.com",
+    "name_zh": "MOCK_伽马通票联营",
+    "supplier_id": "MOCK_SUP_GAMMA"
+  }
+]

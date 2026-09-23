@@ -1,0 +1,47 @@
+[
+  {
+    "coordinates": {
+      "lat": 34.666,
+      "lng": 135.432
+    },
+    "hub": "MOCK_环球城站",
+    "name_zh": "MOCK_此花区",
+    "region_id": "MOCK_REG_KONOHANA"
+  },
+  {
+    "coordinates": {
+      "lat": 34.654,
+      "lng": 135.429
+    },
+    "hub": "MOCK_大阪港站",
+    "name_zh": "MOCK_港区",
+    "region_id": "MOCK_REG_MINATO"
+  },
+  {
+    "coordinates": {
+      "lat": 34.666,
+      "lng": 135.5
+    },
+    "hub": "MOCK_难波站",
+    "name_zh": "MOCK_中央区",
+    "region_id": "MOCK_REG_CHUO"
+  },
+  {
+    "coordinates": {
+      "lat": 34.702,
+      "lng": 135.496
+    },
+    "hub": "MOCK_梅田站",
+    "name_zh": "MOCK_北区",
+    "region_id": "MOCK_REG_KITA"
+  },
+  {
+    "coordinates": {
+      "lat": 34.807,
+      "lng": 135.533
+    },
+    "hub": "MOCK_万博纪念公园站",
+    "name_zh": "MOCK_吹田市",
+    "region_id": "MOCK_REG_SUITA"
+  }
+]

@@ -1,0 +1,20 @@
+version = 0.1
+
+[default.global.parameters]
+stack_name = "yuetu-trip-cde-demo"
+
+[default.build.parameters]
+cached = true
+parallel = true
+
+[default.deploy.parameters]
+capabilities = "CAPABILITY_IAM"
+region = "us-east-1"
+confirm_changeset = false
+resolve_s3 = true
+s3_prefix = "yuetu-trip-cde-demo"
+parameter_overrides = "Stage=\"demo\" AuthMode=\"handler_decide\" EnableLlmNarrative=\"false\""
+tags = "Project=\"yuetu-trip-cde\" Maturity=\"prototype-not-production\" DataClassification=\"SYNTHETIC_MOCK_ONLY\""
+
+[default.sync.parameters]
+watch = false

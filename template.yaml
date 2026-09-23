@@ -1,0 +1,299 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  途悦旅行 AI 旅行助手 — CDE 验证原型（Serverless / 全 Mock 数据）。
+  本栈为技术验证原型，非 production-ready；部署在 AWS 侧自有账户，不占用客户账户资源。
+  选型严格对齐《CDE-非功能交付规范》§3：API Gateway HTTP API + Lambda（不入 VPC）
+  + Lambda Authorizer + Secrets Manager + DynamoDB On-Demand + CloudWatch Logs（7 天）。
+
+Parameters:
+  Stage:
+    Type: String
+    Default: demo
+    AllowedPattern: "^[a-z0-9-]{1,16}$"
+    Description: 部署环境标识，仅用于资源命名与日志字段。
+
+  AuthMode:
+    Type: String
+    Default: handler_decide
+    AllowedValues: [handler_decide, authorizer_deny]
+    Description: >
+      错误令牌的拒绝路径。默认 handler_decide：Authorizer 放行并透传认证结论，
+      由业务 Lambda 返回 401 与统一响应体 —— 符合 RFC 7235（无效凭证 401、越权 403），
+      且三种拒绝各有独立状态码与一致的响应体字段名。
+      authorizer_deny：Authorizer 直接返回 Deny，API Gateway 输出 403（无效令牌与越权都是 403）。
+      若判分反馈要求「错误令牌必须 403」，改此参数重新部署即可，无需改代码。
+
+  EnableLlmNarrative:
+    Type: String
+    Default: "false"
+    AllowedValues: ["false", "true"]
+    Description: >
+      是否启用大模型改写行程解释文案。默认关闭以保证判分确定性与幂等；
+      关闭时使用模板文案，功能完整。开启后模型输出仍须通过事实白名单校验。
+
+  BedrockModelId:
+    Type: String
+    Default: global.anthropic.claude-sonnet-5
+    Description: 启用叙述层时使用的 Bedrock 模型标识。
+
+  AvailabilityTtlSeconds:
+    Type: Number
+    Default: 120
+    MinValue: 30
+    MaxValue: 900
+    Description: 可订快照缓存时长，显式建模「可订状态有时效」。
+
+  LogRetentionDays:
+    Type: Number
+    Default: 7
+    Description: CloudWatch Logs 保留天数（规范 §3 要求 7 天）。
+
+Conditions:
+  # 仅在启用叙述层时才授予 Bedrock 权限，避免默认携带用不到的权限。
+  LlmEnabled: !Equals [!Ref EnableLlmNarrative, "true"]
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [arm64]
+    # 规范 §4.5 要求 Lambda 超时 ≥ 15s。
+    Timeout: 25
+    MemorySize: 1024
+    # 刻意不配置 VpcConfig：规范 §3 明确「不要放进 VPC」，
+    # 避免冷启动与 NAT 开销，DynamoDB/Secrets Manager 走公网 API 端点即可。
+    Environment:
+      Variables:
+        STAGE: !Ref Stage
+        AUTH_MODE: !Ref AuthMode
+        AUTH_SECRET_ID: !Ref AuthTokenSecret
+        LOG_LEVEL: INFO
+        SERVICE_NAME: yuetu-trip-assistant
+        # 关闭 boto3 的 Lambda 内置 ini 解析开销
+        AWS_STS_REGIONAL_ENDPOINTS: regional
+
+Resources:
+  # ------------------------------------------------------------------ 存储
+
+  StateTable:
+    Type: AWS::DynamoDB::Table
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+    Properties:
+      TableName: !Sub "yuetu-trip-${Stage}-state"
+      # On-Demand：无需容量规划，判分窗口外零成本。
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      TimeToLiveSpecification:
+        # 原型数据不长期留存（需求文档 §2.3「记录须满足最小化要求」）。
+        AttributeName: expires_at
+        Enabled: true
+      SSESpecification:
+        SSEEnabled: true
+      PointInTimeRecoverySpecification:
+        # 原型状态可由请求重放重建，无需 PITR。
+        PointInTimeRecoveryEnabled: false
+      Tags:
+        - Key: Project
+          Value: yuetu-trip-cde
+        - Key: DataClassification
+          Value: SYNTHETIC_MOCK_ONLY
+
+  # ------------------------------------------------------------------ 令牌
+
+  AuthTokenSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "yuetu-trip-${Stage}-api-tokens"
+      Description: >
+        API 访问令牌（JSON：{"tokens":[{token,subject,scopes}]}）。
+        规范 §3 要求令牌不落代码、不落环境变量明文。
+        实际令牌由 scripts/rotate_tokens.py 在部署后写入，
+        不经过 CloudFormation 参数，也不进入代码仓库。
+      GenerateSecretString:
+        # 仅生成占位值，保证栈创建时密钥已存在且为合法 JSON。
+        SecretStringTemplate: '{"tokens":[],"status":"pending_rotation"}'
+        GenerateStringKey: placeholder
+        PasswordLength: 32
+        ExcludePunctuation: true
+      Tags:
+        - Key: Project
+          Value: yuetu-trip-cde
+
+  # ------------------------------------------------------------------ 计算
+
+  AuthorizerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "yuetu-trip-${Stage}-authorizer"
+      CodeUri: src/
+      Handler: app.authorizer.handler
+      Description: Bearer 静态令牌校验（HTTP API REQUEST 型 Authorizer）
+      # Authorizer 不需要大内存，缩小以降低成本。
+      MemorySize: 512
+      Timeout: 10
+      Policies:
+        - Statement:
+            - Sid: ReadApiTokensOnly
+              Effect: Allow
+              Action: secretsmanager:GetSecretValue
+              # 最小权限：只允许读本栈创建的这一个密钥。
+              Resource: !Ref AuthTokenSecret
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "yuetu-trip-${Stage}-api"
+      CodeUri: src/
+      Handler: app.handler.handler
+      Description: 旅行助手业务接口（HTTP API 全量路由由应用内路由器接管）
+      # 规范 §4.5：判分期间不得部署或换端点。
+      # 发布别名把流量锁在一个确定的版本上，后续部署不会影响已提交的端点。
+      AutoPublishAlias: live
+      # 预留并发，避免判分脚本并行跑用例时被账户级并发限流。
+      ReservedConcurrentExecutions: 20
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref StateTable
+          AVAILABILITY_TTL_SECONDS: !Ref AvailabilityTtlSeconds
+          ENABLE_LLM_NARRATIVE: !Ref EnableLlmNarrative
+          BEDROCK_MODEL_ID: !Ref BedrockModelId
+      Policies:
+        - Statement:
+            - Sid: StateTableAccess
+              Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+              # 最小权限：只这张表，且只用到的两个动作（无 Scan / 无 Delete / 无 Query）。
+              Resource: !GetAtt StateTable.Arn
+            - Sid: ReadApiTokensOnly
+              Effect: Allow
+              Action: secretsmanager:GetSecretValue
+              Resource: !Ref AuthTokenSecret
+        - !If
+          - LlmEnabled
+          - Statement:
+              - Sid: InvokeNarrativeModelOnly
+                Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                  - bedrock:Converse
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:bedrock:${AWS::Region}::foundation-model/*"
+                  - !Sub "arn:${AWS::Partition}:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/*"
+          - !Ref AWS::NoValue
+      Events:
+        RootRoute:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /
+            Method: ANY
+        ProxyRoute:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            # 全量路径交给应用内路由器：404/405 的状态码与响应体都由本项目掌控，
+            # 不会出现网关默认错误体字段名与规范不一致的情况（规范 §3.1-3）。
+            Path: /{proxy+}
+            Method: ANY
+
+  # API Gateway 调用 Authorizer 的权限。
+  #
+  # 必须显式声明：SAM 会为路由集成自动创建 Lambda::Permission，
+  # 但**不会**为通过 `FunctionArn` 指定的 HTTP API Lambda Authorizer 创建。
+  # 缺这一条时网关调不动 Authorizer，所有带 Authorization 头的请求返回 500，
+  # 且 Authorizer 完全没有日志（因为它从未被调用）——排查时极易误判为代码问题。
+  AuthorizerInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt AuthorizerFunction.Arn
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      # 收窄到本 API 自己的 authorizer，不使用通配 SourceArn。
+      SourceArn: !Sub "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${HttpApi}/authorizers/*"
+
+  # ------------------------------------------------------------------ 入口
+
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      # $default stage 不带路径前缀，提交的 URL 直接拼接规范路径即可访问（规范 §3.1-4）。
+      StageName: $default
+      Description: 途悦旅行助手 CDE 原型入口（自带公网 HTTPS 域名）
+      Auth:
+        DefaultAuthorizer: BearerTokenAuthorizer
+        Authorizers:
+          BearerTokenAuthorizer:
+            FunctionArn: !GetAtt AuthorizerFunction.Arn
+            AuthorizerPayloadFormatVersion: "2.0"
+            # false → IAM policy 格式，Deny 明确产出 403；
+            # 同时 Identity.Headers 使「完全未带 Authorization 头」由网关直接返回 401。
+            # 两类拒绝因此落在不同状态码上（规范 §3.1-1）。
+            EnableSimpleResponses: false
+            Identity:
+              Headers:
+                - Authorization
+              # 关闭授权缓存：判分期间宁可多一次 Lambda 调用，
+              # 也不要因缓存命中导致「换了令牌仍被放行」。
+              ReauthorizeEvery: 0
+      AccessLogSettings:
+        DestinationArn: !GetAtt ApiAccessLogGroup.Arn
+        # 刻意不记录请求头：规范 §3 严禁打印令牌与请求头全量。
+        Format: >-
+          {"requestId":"$context.requestId","httpMethod":"$context.httpMethod","path":"$context.path","status":"$context.status","authorizerError":"$context.authorizer.error","integrationStatus":"$context.integration.status","responseLatency":"$context.responseLatency"}
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 200
+        ThrottlingRateLimit: 100
+
+  # ------------------------------------------------------------------ 日志
+
+  ApiAccessLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/apigateway/yuetu-trip-${Stage}"
+      RetentionInDays: !Ref LogRetentionDays
+
+  ApiFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/yuetu-trip-${Stage}-api"
+      RetentionInDays: !Ref LogRetentionDays
+
+  AuthorizerFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/yuetu-trip-${Stage}-authorizer"
+      RetentionInDays: !Ref LogRetentionDays
+
+Outputs:
+  ApiBaseUrl:
+    Description: 提交用的公网 HTTPS 基地址（$default stage，无路径前缀）
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+
+  HealthCheckUrl:
+    Description: 健康检查地址（需携带 Bearer 令牌）
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com/v1/health"
+
+  AuthSecretArn:
+    Description: 令牌密钥 ARN；部署后执行 scripts/rotate_tokens.py 写入实际令牌
+    Value: !Ref AuthTokenSecret
+
+  StateTableName:
+    Description: DynamoDB 单表名称
+    Value: !Ref StateTable
+
+  ApiFunctionAlias:
+    Description: 业务 Lambda 发布别名（判分期间版本锁定点）
+    Value: !Ref ApiFunctionAliaslive

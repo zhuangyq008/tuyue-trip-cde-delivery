@@ -1,0 +1,260 @@
+[
+  {
+    "body": "MOCK_合成文案：建议开园即入，先完成儿童区项目，午后安排室内演出避开日晒。带 4-11 岁儿童建议预留 6-7 小时，园内餐厅需排队。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0001",
+    "keywords": [
+      "MOCK_大阪影视主题乐园",
+      "theme_park",
+      "亲子",
+      "半日以上",
+      "户外"
+    ],
+    "poi_id": "MOCK_POI_THEMEPARK",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0001"
+    },
+    "tags": [
+      "亲子",
+      "户外",
+      "半日以上"
+    ],
+    "title": "MOCK_主题乐园亲子动线建议",
+    "updated_at": "2026-09-02T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：单向参观动线，约 2-2.5 小时。婴儿车可推入，馆内设哺乳室。每年 11 月下旬有 1 天例行检修闭馆。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0002",
+    "keywords": [
+      "MOCK_大阪湾海洋馆",
+      "aquarium",
+      "亲子",
+      "室内",
+      "雨天备选"
+    ],
+    "poi_id": "MOCK_POI_AQUARIUM",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_目的地知识库",
+      "type": "destination_kb",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0002"
+    },
+    "tags": [
+      "亲子",
+      "室内",
+      "雨天备选"
+    ],
+    "title": "MOCK_海洋馆参观须知",
+    "updated_at": "2026-08-14T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：展项面向 3-15 岁设计，12 岁以下须成人陪同。周一固定闭馆。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0003",
+    "keywords": [
+      "MOCK_儿童科学探索馆",
+      "kids_museum",
+      "亲子",
+      "室内",
+      "教育"
+    ],
+    "poi_id": "MOCK_POI_KIDS_SCIENCE",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_目的地知识库",
+      "type": "destination_kb",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0003"
+    },
+    "tags": [
+      "亲子",
+      "室内",
+      "教育"
+    ],
+    "title": "MOCK_儿童科学馆年龄适配说明",
+    "updated_at": "2026-07-20T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：仅接待携带 2-12 岁儿童的家庭，成人不可单独入场；身高低于 85cm 的幼儿不建议参与主体项目。需提前 2 天预约时段。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0004",
+    "keywords": [
+      "MOCK_积木探索中心",
+      "kids_indoor",
+      "亲子",
+      "室内",
+      "需预约"
+    ],
+    "poi_id": "MOCK_POI_BRICK_CENTER",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0004"
+    },
+    "tags": [
+      "亲子",
+      "室内",
+      "需预约"
+    ],
+    "title": "MOCK_积木中心入场限制",
+    "updated_at": "2026-09-14T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：园区较大，天守阁内以楼梯为主，推婴儿车不便。建议控制在 2 小时内，夏季注意补水。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0005",
+    "keywords": [
+      "MOCK_中央城址公园",
+      "historic_site",
+      "历史",
+      "户外"
+    ],
+    "poi_id": "MOCK_POI_CASTLE_PARK",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_目的地知识库",
+      "type": "destination_kb",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0005"
+    },
+    "tags": [
+      "户外",
+      "历史"
+    ],
+    "title": "MOCK_城址公园步行强度提示",
+    "updated_at": "2025-08-19T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：日落前 40 分钟入场可同时看到白天与夜景。顶层为半露天，有风。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0006",
+    "keywords": [
+      "MOCK_北区空中观景台",
+      "observation_deck",
+      "夜景",
+      "室内"
+    ],
+    "poi_id": "MOCK_POI_SKY_DECK",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0006"
+    },
+    "tags": [
+      "室内",
+      "夜景"
+    ],
+    "title": "MOCK_观景台最佳时段",
+    "updated_at": "2026-09-08T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：晚间人流密集，建议 17:00 前抵达，多数摊位不提供儿童座椅。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0007",
+    "keywords": [
+      "MOCK_中央区小吃街",
+      "food_district",
+      "户外",
+      "餐饮"
+    ],
+    "poi_id": "MOCK_POI_FOOD_STREET",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_目的地知识库",
+      "type": "destination_kb",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0007"
+    },
+    "tags": [
+      "餐饮",
+      "户外"
+    ],
+    "title": "MOCK_小吃街带娃注意事项",
+    "updated_at": "2026-08-24T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：全程步行约 3 小时，周三闭园。园内有大型儿童游具区。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0008",
+    "keywords": [
+      "MOCK_吹田生态公园",
+      "park",
+      "亲子",
+      "户外"
+    ],
+    "poi_id": "MOCK_POI_NATURE_PARK",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_目的地知识库",
+      "type": "destination_kb",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0008"
+    },
+    "tags": [
+      "亲子",
+      "户外"
+    ],
+    "title": "MOCK_生态公园游玩时长",
+    "updated_at": "2026-08-02T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：模型演示每小时一场，建议对准场次入场。周四闭馆。",
+    "conflicts_with_poi_hours": false,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0009",
+    "keywords": [
+      "MOCK_铁道模型博物馆",
+      "museum",
+      "亲子",
+      "室内"
+    ],
+    "poi_id": "MOCK_POI_TRAIN_MUSEUM",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0009"
+    },
+    "tags": [
+      "亲子",
+      "室内"
+    ],
+    "title": "MOCK_铁道博物馆动线",
+    "updated_at": "2026-09-12T00:00:00Z"
+  },
+  {
+    "body": "MOCK_合成文案：本文案记录营业至 21:00，与目的地知识库记录的 22:00 不一致，属于需人工核对的冲突数据样例。",
+    "conflicts_with_poi_hours": true,
+    "destination": "大阪",
+    "doc_id": "MOCK_DOC_0010",
+    "keywords": [
+      "MOCK_港区海景摩天轮",
+      "landmark",
+      "冲突样例",
+      "户外"
+    ],
+    "poi_id": "MOCK_POI_FERRIS_WHEEL",
+    "source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "url": "https://mock.example.invalid/doc/MOCK_DOC_0010"
+    },
+    "tags": [
+      "户外",
+      "冲突样例"
+    ],
+    "title": "MOCK_摩天轮运营时间（存在冲突版本）",
+    "updated_at": "2026-09-18T00:00:00Z"
+  }
+]

@@ -1,0 +1,608 @@
+[
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-07-29T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_themepark_1day"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 1,
+      "bookable_until_days_ahead": 120
+    },
+    "duration_minutes": 420,
+    "merchant_ids": [
+      "MOCK_MER_THEMEPARK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "date_based",
+      "sold_out_dates": [
+        "2026-11-22"
+      ]
+    },
+    "name_zh": "MOCK_主题乐园一日门票",
+    "pax_rules": {
+      "child_age_range": [
+        4,
+        11
+      ],
+      "infant_free_under": 4,
+      "max_pax": 9,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_THEMEPARK"
+    ],
+    "price_hint": {
+      "adult": 468.0,
+      "child": 318.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_THEMEPARK_1DAY",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 72,
+      "refundable": true
+    },
+    "requires_reservation": true,
+    "supplier_id": "MOCK_SUP_ALPHA",
+    "supplier_name": "MOCK_阿尔法票务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-09-05T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_themepark_express"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 1,
+      "bookable_until_days_ahead": 60
+    },
+    "duration_minutes": 420,
+    "merchant_ids": [
+      "MOCK_MER_THEMEPARK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "sold_out",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_主题乐园快速通行券",
+    "pax_rules": {
+      "child_age_range": [
+        4,
+        11
+      ],
+      "infant_free_under": 4,
+      "max_pax": 6,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_THEMEPARK"
+    ],
+    "price_hint": {
+      "adult": 520.0,
+      "child": 520.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_THEMEPARK_EXPRESS",
+    "product_type": "add_on",
+    "refund_policy": {
+      "free_cancel_hours": 0,
+      "refundable": false
+    },
+    "requires_reservation": true,
+    "supplier_id": "MOCK_SUP_ALPHA",
+    "supplier_name": "MOCK_阿尔法票务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-09-13T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_aquarium_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [
+        "2026-11-25"
+      ],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 90
+    },
+    "duration_minutes": 150,
+    "merchant_ids": [
+      "MOCK_MER_AQUARIUM"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_海洋馆电子门票",
+    "pax_rules": {
+      "child_age_range": [
+        3,
+        15
+      ],
+      "infant_free_under": 3,
+      "max_pax": 10,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_AQUARIUM"
+    ],
+    "price_hint": {
+      "adult": 132.0,
+      "child": 66.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_AQUARIUM_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_BETA",
+    "supplier_name": "MOCK_贝塔目的地服务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-05T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_city_pass_2day"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 180
+    },
+    "duration_minutes": 150,
+    "merchant_ids": [
+      "MOCK_MER_AQUARIUM",
+      "MOCK_MER_CASTLE_PARK",
+      "MOCK_MER_FERRIS_WHEEL",
+      "MOCK_MER_SKY_DECK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_城市二日周游通票",
+    "pax_rules": {
+      "child_age_range": [
+        6,
+        12
+      ],
+      "infant_free_under": 6,
+      "max_pax": 12,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_AQUARIUM",
+      "MOCK_POI_FERRIS_WHEEL",
+      "MOCK_POI_CASTLE_PARK",
+      "MOCK_POI_SKY_DECK"
+    ],
+    "price_hint": {
+      "adult": 178.0,
+      "child": 92.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_CITY_PASS_2DAY",
+    "product_type": "pass",
+    "refund_policy": {
+      "free_cancel_hours": 48,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_GAMMA",
+    "supplier_name": "MOCK_伽马通票联营"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-10T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_castle_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 60
+    },
+    "duration_minutes": 120,
+    "merchant_ids": [
+      "MOCK_MER_CASTLE_PARK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "error",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_城址天守阁门票",
+    "pax_rules": {
+      "child_age_range": [
+        6,
+        15
+      ],
+      "infant_free_under": 6,
+      "max_pax": 20,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_CASTLE_PARK"
+    ],
+    "price_hint": {
+      "adult": 32.0,
+      "child": 0.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_CASTLE_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 0,
+      "refundable": false
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_BETA",
+    "supplier_name": "MOCK_贝塔目的地服务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-09-11T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_kids_science_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 45
+    },
+    "duration_minutes": 180,
+    "merchant_ids": [
+      "MOCK_MER_KIDS_SCIENCE"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "timeout",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_儿童科学馆亲子套票",
+    "pax_rules": {
+      "child_age_range": [
+        3,
+        15
+      ],
+      "infant_free_under": 3,
+      "max_pax": 6,
+      "min_pax": 2
+    },
+    "poi_ids": [
+      "MOCK_POI_KIDS_SCIENCE"
+    ],
+    "price_hint": {
+      "adult": 76.0,
+      "child": 38.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_KIDS_SCIENCE_TICKET",
+    "product_type": "family_package",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_BETA",
+    "supplier_name": "MOCK_贝塔目的地服务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-13T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_sky_deck_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 90
+    },
+    "duration_minutes": 90,
+    "merchant_ids": [
+      "MOCK_MER_SKY_DECK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "partial",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_空中观景台门票",
+    "pax_rules": {
+      "child_age_range": [
+        4,
+        12
+      ],
+      "infant_free_under": 4,
+      "max_pax": 10,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_SKY_DECK"
+    ],
+    "price_hint": {
+      "adult": 88.0,
+      "child": 44.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_SKY_DECK_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 12,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_GAMMA",
+    "supplier_name": "MOCK_伽马通票联营"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-25T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_brick_center_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 2,
+      "bookable_until_days_ahead": 60
+    },
+    "duration_minutes": 150,
+    "merchant_ids": [
+      "MOCK_MER_BRICK_CENTER"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_积木中心时段票",
+    "pax_rules": {
+      "child_age_range": [
+        2,
+        12
+      ],
+      "infant_free_under": 2,
+      "max_pax": 8,
+      "min_pax": 2
+    },
+    "poi_ids": [
+      "MOCK_POI_BRICK_CENTER"
+    ],
+    "price_hint": {
+      "adult": 118.0,
+      "child": 118.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_BRICK_CENTER_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 48,
+      "refundable": true
+    },
+    "requires_reservation": true,
+    "supplier_id": "MOCK_SUP_ALPHA",
+    "supplier_name": "MOCK_阿尔法票务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-12T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_nature_park_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 90
+    },
+    "duration_minutes": 200,
+    "merchant_ids": [
+      "MOCK_MER_NATURE_PARK"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_生态公园入园券",
+    "pax_rules": {
+      "child_age_range": [
+        3,
+        15
+      ],
+      "infant_free_under": 3,
+      "max_pax": 15,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_NATURE_PARK"
+    ],
+    "price_hint": {
+      "adult": 42.0,
+      "child": 21.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_NATURE_PARK_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_BETA",
+    "supplier_name": "MOCK_贝塔目的地服务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-21T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_train_museum_ticket"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 90
+    },
+    "duration_minutes": 120,
+    "merchant_ids": [
+      "MOCK_MER_TRAIN_MUSEUM"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_铁道博物馆门票",
+    "pax_rules": {
+      "child_age_range": [
+        3,
+        15
+      ],
+      "infant_free_under": 3,
+      "max_pax": 10,
+      "min_pax": 1
+    },
+    "poi_ids": [
+      "MOCK_POI_TRAIN_MUSEUM"
+    ],
+    "price_hint": {
+      "adult": 58.0,
+      "child": 29.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_TRAIN_MUSEUM_TICKET",
+    "product_type": "attraction_ticket",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_GAMMA",
+    "supplier_name": "MOCK_伽马通票联营"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-07-30T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_family_hotel_chuo"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 0,
+      "bookable_until_days_ahead": 300
+    },
+    "duration_minutes": null,
+    "merchant_ids": [
+      "MOCK_MER_HOTEL_CHUO"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_中央区家庭房两晚",
+    "pax_rules": {
+      "child_age_range": [
+        0,
+        12
+      ],
+      "infant_free_under": 6,
+      "max_pax": 4,
+      "min_pax": 2
+    },
+    "poi_ids": [],
+    "price_hint": {
+      "adult": 640.0,
+      "child": 0.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_FAMILY_HOTEL_CHUO",
+    "product_type": "hotel",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": false,
+    "supplier_id": "MOCK_SUP_ALPHA",
+    "supplier_name": "MOCK_阿尔法票务"
+  },
+  {
+    "currency": "CNY",
+    "data_source": {
+      "license": "authorized_internal",
+      "name": "MOCK_商品文案库",
+      "type": "merchandise_copy",
+      "updated_at": "2026-08-25T00:00:00Z",
+      "url": "https://mock.example.invalid/catalog/mock_prod_airport_transfer"
+    },
+    "date_rules": {
+      "blackout_dates": [],
+      "bookable_from_days_ahead": 1,
+      "bookable_until_days_ahead": 180
+    },
+    "duration_minutes": null,
+    "merchant_ids": [
+      "MOCK_MER_TRANSFER"
+    ],
+    "mock_supplier_behavior": {
+      "mode": "ok",
+      "sold_out_dates": []
+    },
+    "name_zh": "MOCK_机场往返接送（含儿童安全座椅）",
+    "pax_rules": {
+      "child_age_range": [
+        0,
+        12
+      ],
+      "infant_free_under": 2,
+      "max_pax": 6,
+      "min_pax": 1
+    },
+    "poi_ids": [],
+    "price_hint": {
+      "adult": 288.0,
+      "child": 0.0,
+      "note": "MOCK_历史参考价，仅用于展示排序；实际报价以供应商实时查询为准。"
+    },
+    "product_id": "MOCK_PROD_AIRPORT_TRANSFER",
+    "product_type": "transfer",
+    "refund_policy": {
+      "free_cancel_hours": 24,
+      "refundable": true
+    },
+    "requires_reservation": true,
+    "supplier_id": "MOCK_SUP_BETA",
+    "supplier_name": "MOCK_贝塔目的地服务"
+  }
+]

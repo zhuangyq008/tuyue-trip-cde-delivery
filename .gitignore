@@ -1,0 +1,32 @@
+# 构建产物
+.aws-sam/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 本地环境
+.venv/
+venv/
+.env
+.env.*
+
+# 绝不入库：令牌与凭证
+*token*.txt
+*secret*.json
+credentials
+*.pem
+
+# 上游需求文档（客户资料，按保密要求不入公开仓库）
+途悦旅行_AI旅行助手_需求分析文档.md
+CDE-非功能交付规范.md
+数据清单-v3.md
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store

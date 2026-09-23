@@ -1,0 +1,10 @@
+{
+  "aligned_data_inventory": "数据清单-v3.md（9 项核心数据项全覆盖）",
+  "anchor_date": "2026-09-23",
+  "data_classification": "SYNTHETIC_MOCK_ONLY",
+  "dataset_version": "2.0.0",
+  "generator": "tools/generate_mock_data.py",
+  "notice": "全部为合成数据，不含任何真实客户数据、真实个人信息或真实支付信息。",
+  "seed": 20260923,
+  "weekday_convention": "0=Monday ... 6=Sunday"
+}
