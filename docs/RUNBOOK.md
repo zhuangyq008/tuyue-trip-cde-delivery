@@ -199,3 +199,82 @@ aws cloudformation describe-stacks --stack-name yuetu-trip-cde-demo 2>&1 | head 
 | Secrets Manager | **按密钥数计月费** | 约 $0.40/月/密钥 |
 
 唯一有固定成本的是 Secrets Manager 密钥。验收结束后按第六节删除即可。
+
+---
+
+## 八、演示界面（CloudFront）
+
+判分交付物是 REST API；界面是给业务汇报用的演示层，放在**独立栈** `yuetu-trip-ui-demo`。
+它与 CDE 交付栈完全解耦——删除 UI 栈不影响已提交的 API 端点。
+
+### 部署
+
+```bash
+# 前置：CDE 交付栈已部署（脚本从它的 ApiBaseUrl 输出解析 API 源）
+python3 scripts/deploy_ui.py
+```
+
+脚本会：解析 API 域名 → 创建/更新 CloudFront + 私有 S3 栈 → 上传 `web/index.html`
+→ 发起缓存失效 → 打印访问地址。**CloudFront 首次创建通常 10–20 分钟**，属正常。
+
+### 使用
+
+打开输出的 `https://<dist>.cloudfront.net`，在右上角粘贴 **read+write** 令牌后点「连接」。
+
+```bash
+# 取令牌
+aws secretsmanager get-secret-value --secret-id yuetu-trip-demo-api-tokens \
+  --query SecretString --output text | python3 -m json.tool
+```
+
+> ⚠ 屏幕共享演示时：令牌输入框是掩码的，但浏览器开发者工具里可见。
+> 建议演示前先在非共享窗口连接好，或演示结束后轮换令牌。
+
+### 改了页面之后
+
+```bash
+python3 scripts/deploy_ui.py --sync-only   # 重传 + 失效缓存，不动 CloudFront 配置
+```
+
+本地改页面时用预览服务更快（不必等缓存失效）：
+
+```bash
+python3 scripts/serve_ui.py --port 8080
+# 从自己的电脑访问：ssh -L 8080:localhost:8080 ec2-user@<EC2 地址>
+```
+
+预览服务与 CloudFront 的路径语义一致（`/` 走页面、`/v1/*` 走 API），
+且同样**不持有令牌**，所以本地看到的表现与线上一致——包括未输入令牌时的 401。
+
+### 演示现场建议的讲述顺序
+
+界面刻意把失败路径和顺利路径放得一样显眼。建议按这个顺序走：
+
+1. **先留空「出发日期」点生成** —— 出现「需求澄清」，说明缺信息返回 200 追问而不是报错
+2. **目的地改成「冰岛」** —— 出现 422 逐字段错误，说明字段非法与信息缺失是两回事
+3. **填完整生成行程** —— 时间轴、天气、开门等候、可执行性校验三档
+4. **指出「被商户状态排除的景点」** —— 过滤动作是可见的，不是悄悄少几个
+5. **在商品表里点一个可订商品的「创建预订意图」** —— 展示锁价/库存保留/预订成功全为「否」
+6. **拉到最下面跑「可订状态实验台」** —— 9 个失败形态一次看完，不变式成立
+7. **最后开「数据清单 v3 覆盖度」** —— 与客户团队逐项对表
+
+### 排查
+
+| 症状 | 原因 | 处理 |
+|---|---|---|
+| 页面能打开但点「连接」报 401 | 令牌无效或刚轮换（缓存 TTL 5 分钟） | 确认令牌来自 Secrets Manager 当前值；刚轮换过则等 5 分钟或 `sam deploy` 强制轮换执行环境 |
+| 点「连接」报 403 | 用了只读令牌 | 本页需要 read+write |
+| `/v1/*` 返回 403 且响应体不是本项目格式 | CloudFront 把 `Host` 头透传给了 API Gateway | 确认 API 行为用的是 `AllViewerExceptHostHeader` 源请求策略 |
+| 改了 HTML 但页面没变 | CloudFront 缓存 | `--sync-only` 重跑；或等失效完成（1–2 分钟） |
+| 可订状态看起来不刷新 | `/v1/*` 被缓存了 | 确认 API 行为用的是 `CachingDisabled` 缓存策略 |
+
+### 成本与清理
+
+CloudFront 与 S3 都按量付费，无固定月费；演示级流量成本可忽略。
+
+```bash
+python3 scripts/deploy_ui.py --delete
+```
+
+脚本会先清空 S3 桶再删栈（桶非空无法随栈删除）。
+CloudFront 分配需先禁用再删除，整个过程约 10–15 分钟，属正常。

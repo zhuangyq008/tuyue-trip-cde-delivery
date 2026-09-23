@@ -1,0 +1,197 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >
+  途悦旅行助手演示界面（CloudFront + S3）。
+
+  **独立于 CDE 交付栈**，刻意不并入 template.yaml，理由有三：
+    1. 判分的交付物应保持原样，不挂一个公开分配；
+    2. CloudFront 变更要十几分钟，混在一起会拖慢 API 的每次迭代；
+    3. 演示结束可单独删除，不影响已提交的 API 端点。
+
+  同源设计：`/` 与 `/index.html` 走 S3 源，`/v1/*` 走 API Gateway 源。
+  两者在同一个 CloudFront 域名下，因此浏览器发的是**同源请求** ——
+  不需要为演示放宽已部署 API 的 CORS 配置。
+  路径天然不冲突（UI 在根、API 在 /v1），因此也不需要任何 URI 重写函数。
+
+  凭证：本栈**不持有任何令牌**。令牌由使用者在页面输入、仅存浏览器
+  sessionStorage；未输入令牌时页面无法调用任何接口。
+
+Parameters:
+  ApiStackName:
+    Type: String
+    Default: yuetu-trip-cde-demo
+    Description: CDE 交付栈名称，用于取 API 域名。
+
+  ApiDomainName:
+    Type: String
+    Default: ""
+    Description: >
+      API Gateway 域名（仅主机名，不含 https:// 与路径），
+      例如 abc123.execute-api.us-east-1.amazonaws.com。
+      留空时由 scripts/deploy_ui.py 自动从 ApiStackName 栈的输出解析并填入。
+
+  PriceClass:
+    Type: String
+    Default: PriceClass_200
+    AllowedValues: [PriceClass_100, PriceClass_200, PriceClass_All]
+    Description: CloudFront 价格等级。PriceClass_200 覆盖亚太，演示够用且更省。
+
+Resources:
+  # ------------------------------------------------------------------ 静态站点桶
+
+  UiBucket:
+    Type: AWS::S3::Bucket
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+    Properties:
+      # 规范 §2：S3 桶关闭公开访问 + 默认加密。
+      # 「反正是假数据」不是裸放的理由。
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+      VersioningConfiguration:
+        Status: Suspended
+      Tags:
+        - Key: Project
+          Value: yuetu-trip-cde
+        - Key: Purpose
+          Value: demo-ui-static
+        - Key: DataClassification
+          Value: NO_CUSTOMER_DATA
+
+  # 桶保持私有；只有本分配能读，通过 OAC 而非公开策略。
+  UiBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref UiBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowThisDistributionOnly
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "${UiBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                # 收窄到本分配，不是「任意 CloudFront 分配」。
+                AWS:SourceArn: !Sub "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+
+  OriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-oac"
+        Description: 只允许本 CloudFront 分配读取 UI 桶
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # ------------------------------------------------------------------ 分配
+
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: !Sub "${AWS::StackName} 途悦旅行助手演示界面"
+        DefaultRootObject: index.html
+        HttpVersion: http2and3
+        IPV6Enabled: true
+        PriceClass: !Ref PriceClass
+
+        Origins:
+          # 源 1：静态界面（S3，私有 + OAC）
+          - Id: ui-s3
+            DomainName: !GetAtt UiBucket.RegionalDomainName
+            OriginAccessControlId: !GetAtt OriginAccessControl.Id
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+
+          # 源 2：业务 API（API Gateway HTTP API）
+          - Id: api-gateway
+            DomainName: !Ref ApiDomainName
+            CustomOriginConfig:
+              OriginProtocolPolicy: https-only
+              OriginSSLProtocols: [TLSv1.2]
+              HTTPSPort: 443
+              OriginReadTimeout: 30
+              OriginKeepaliveTimeout: 5
+
+        # 默认行为：静态界面
+        DefaultCacheBehavior:
+          TargetOriginId: ui-s3
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods: [GET, HEAD, OPTIONS]
+          CachedMethods: [GET, HEAD]
+          Compress: true
+          # 托管策略 CachingOptimized
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          # 托管策略 SecurityHeadersPolicy（HSTS、nosniff、frame-options 等）
+          ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+        CacheBehaviors:
+          # API 行为：全部方法放通、禁用缓存、透传 Authorization
+          - PathPattern: /v1/*
+            TargetOriginId: api-gateway
+            ViewerProtocolPolicy: https-only
+            AllowedMethods: [GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE]
+            CachedMethods: [GET, HEAD]
+            Compress: true
+            # 托管策略 CachingDisabled ——
+            # 可订状态是实时数据，缓存它就等于重演「把过期状态当成当前事实」。
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+            # 托管策略 AllViewerExceptHostHeader ——
+            # 透传 Authorization 等全部请求头，但让 Host 保持 API Gateway 自己的域名
+            # （API Gateway 用 Host 做路由，透传 CloudFront 的 Host 会 403）。
+            OriginRequestPolicyId: b689b0a8-53d0-40ab-baf2-68738e2966ac
+
+        # 刻意**不配置** CustomErrorResponses。
+        #
+        # 一开始配了「403/404 → 200 + /index.html」做单页回落，结果踩了大坑：
+        # CustomErrorResponses 是**分配级的，无法按行为收窄**，
+        # 于是 `/v1/*` 的 403/404 也被一起改写成 200 + HTML ——
+        # API 明明正确返回了 403「令牌缺少 write 权限」，经 CloudFront 后变成 200 携网页。
+        # 这同时违反规范 §4.2「不得返回 200 携错误体」与 §4.3「404 与 422 必须可区分」，
+        # 并且让界面拿到 HTML 而不是 JSON。
+        #
+        # 本界面没有客户端路由（单页、不用 pushState），单页回落本就多余。
+        # 状态码必须原样透传 —— 这比未知路径上的页面观感重要得多。
+
+        ViewerCertificate:
+          # 使用 CloudFront 默认证书与 *.cloudfront.net 域名，无需自备证书。
+          CloudFrontDefaultCertificate: true
+          MinimumProtocolVersion: TLSv1.2_2021
+
+      Tags:
+        - Key: Project
+          Value: yuetu-trip-cde
+        - Key: Purpose
+          Value: demo-ui
+
+Outputs:
+  UiUrl:
+    Description: 演示界面地址（在浏览器打开；需在页面内粘贴 read+write 令牌）
+    Value: !Sub "https://${Distribution.DomainName}"
+
+  ApiUrlViaCloudFront:
+    Description: 经 CloudFront 的 API 地址（与界面同源，因此无需 CORS）
+    Value: !Sub "https://${Distribution.DomainName}/v1/health"
+
+  UiBucketName:
+    Description: 静态资源桶（私有，仅本分配可读）
+    Value: !Ref UiBucket
+
+  DistributionId:
+    Description: 分配 ID，用于缓存失效
+    Value: !Ref Distribution

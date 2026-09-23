@@ -168,7 +168,78 @@ URL: https://<api-id>.execute-api.us-east-1.amazonaws.com
 TOKEN: <完整权限令牌>
 ```
 
-## 五、接口一览
+## 五、演示界面（CloudFront）
+
+判分的交付物是 REST API；界面是给**业务汇报**用的演示层，部署在**独立栈**里。
+
+```bash
+python3 scripts/deploy_ui.py              # 部署（CloudFront 首次创建 10–20 分钟）
+python3 scripts/deploy_ui.py --sync-only  # 只改了 HTML 时重传并失效缓存
+python3 scripts/deploy_ui.py --delete     # 演示结束删除
+python3 scripts/serve_ui.py               # 本地预览（改页面时用，不必等缓存失效）
+```
+
+### 为什么是独立栈
+
+1. 判分的交付物应保持原样，不挂一个公开分配；
+2. CloudFront 变更要十几分钟，混在一起会拖慢 API 的每次迭代；
+3. 演示结束可单独删除，不影响已提交的 API 端点。
+
+### 同源设计：为什么不需要 CORS
+
+一个 CloudFront 分配挂两个源：
+
+| 路径 | 源 | 缓存 |
+|---|---|---|
+| `/`、`/index.html` | S3（**私有** + OAC，Block Public Access 全开） | CachingOptimized |
+| `/v1/*` | API Gateway HTTP API | **CachingDisabled** |
+
+界面与 API 在同一个域名下，浏览器发的就是**同源请求**——不需要为了演示去放宽
+已部署 API 的 CORS 配置（`http/responses.py` 至今不下发任何 `Access-Control-Allow-Origin`）。
+路径天然不冲突（UI 在根、API 在 `/v1`），所以也**不需要任何 URI 重写函数**。
+
+`/v1/*` 必须禁用缓存：可订状态是实时数据，缓存它就等于重演"把过期状态当成当前事实"。
+原始请求头经 `AllViewerExceptHostHeader` 透传（`Authorization` 要过去，`Host` 不能过去
+——API Gateway 用 `Host` 做路由）。
+
+### 令牌怎么处理
+
+**UI 栈不持有任何令牌。** 令牌由使用者在页面右上角输入，只存当前标签的
+`sessionStorage`，关标签即失效：
+
+- 不写入 CloudFront 配置、不写入 CloudFormation 模板、不写入代码仓库
+- 未输入令牌时页面无法调用任何接口；未授权访客只看到一个输入框
+- 令牌仍然只有一个权威来源：Secrets Manager
+
+这是刻意的取舍。让 CloudFront 用 `OriginCustomHeaders` 注入令牌能省掉粘贴这一步，
+但代价是令牌进入分配配置，且那个公开 URL 会变成**无鉴权的可写 API 入口**。
+对一个演示界面来说，多粘一次令牌远比这个代价便宜。
+
+### 界面包含什么
+
+按需求文档的七步链路组织，**失败路径和顺利路径一样显眼**：
+
+- 需求表单 —— 留空必填项可现场演示「需求澄清」（200 追问，不是报错）；目的地选"冰岛"可演示 422
+- 统计磁贴 + **可订占比条** + 五态表格
+- 行程时间轴（含天气、交通、用餐、休息、开门等候）
+- 可执行性校验（阻断/提醒/待确认三档，带修复建议）
+- **被商户在营状态排除的景点**（过滤动作可见）
+- 商品映射与预订意图（可订的才有按钮；不可订的明确写"无预订入口"）
+- **可订状态实验台** —— 一键跑 9 个真实失败形态，验证不变式
+- 数据清单 9 项覆盖度对照表
+- 完整 API 原始响应（技术评审用）
+
+### 界面的可视化取舍
+
+一开始想用 5 段堆叠条表示五种可订状态。跑配色验证器后否掉了：状态色里
+黄（`#fab219`）与橙（`#ec835a`）相邻时**正常视力 ΔE 仅 13.6**（低于 15 底线），
+红（`#d03b3b`）与绿（`#0ca30c`）在 deutan 模拟下 **ΔE 4.1**——颜色根本承载不了这个区分。
+
+改成：**头条是二元的**（可订 vs 不可订，两色 CVD ΔE 10.7 / 正常视力 20.2，双模式通过），
+五态明细走**表格**。每个状态都是「色点 + 图标 + 文字」三件套，颜色永不单独承载含义。
+深色模式是各色针对深色表面重新取步，不是自动反转。
+
+## 六、接口一览
 
 完整契约见 [`docs/API.md`](docs/API.md)。所有路由均需 Bearer 令牌（**包括健康检查**——
 留一个匿名端点等于给出一条绕过鉴权的路径）。
@@ -196,7 +267,7 @@ TOKEN: <完整权限令牌>
 | POST | `/v1/events` | write | 漏斗埋点 |
 | GET | `/v1/funnel` | read | 漏斗口径定义 |
 
-## 六、代码结构
+## 七、代码结构
 
 ```
 src/app/
@@ -217,9 +288,14 @@ src/app/
 │   └── narrative.py      大模型边界层（事实白名单 + 输出校验）
 ├── api/                  路由处理函数
 └── data/mock/            Mock 数据集（随包分发）
+web/index.html                演示界面（自包含单文件，无 CDN，离线可用）
+template-ui.yaml              演示界面基础设施（CloudFront + 私有 S3，独立栈）
 tools/generate_mock_data.py   数据生成器（固定 seed + 合规自检）
 scripts/preflight_check.py    提交前自检（§5 清单自动化）
 scripts/rotate_tokens.py      令牌生成与写入
+scripts/deploy_ui.py          部署/更新/删除演示界面
+scripts/serve_ui.py           界面本地预览（纯透传，不持有令牌）
+scripts/demo.py               命令行端到端演示（不需要 AWS 凭证）
 ```
 
 ### 一个刻意的分层
@@ -229,7 +305,7 @@ scripts/rotate_tokens.py      令牌生成与写入
 并给出**经过开放日校验的**同区域备选。如果生成器自己把问题藏掉，
 「行程可执行率」这个指标就失去意义了。
 
-## 七、首期不包含
+## 八、首期不包含
 
 与需求文档 §4.5 一致：
 
@@ -239,7 +315,7 @@ scripts/rotate_tokens.py      令牌生成与写入
 - 自动替用户下单付款、保证锁价锁库存
 - 在未确认核心用户画像前铺开全部城市与客群
 
-## 八、已知限制
+## 九、已知限制
 
 诚实列出，避免把原型当成品：
 
@@ -252,7 +328,7 @@ scripts/rotate_tokens.py      令牌生成与写入
 7. **令牌吊销有最长 5 分钟的生效延迟。** Lambda 进程内缓存令牌（带 TTL）以减少 Secrets Manager 调用。紧急吊销须配合强制重新部署，详见 [`docs/RUNBOOK.md`](docs/RUNBOOK.md) 第二节。
 8. **API Gateway 访问日志不记录客户端 IP。** 为满足规范 §3「严禁打印令牌与请求头全量」，日志格式做了收紧；代价是缺少异地调用溯源数据。生产化时可加回 `$context.identity.sourceIp`（该字段不属敏感信息）。
 
-## 九、后续待客户确认
+## 十、后续待客户确认
 
 需求文档 §5.1 列出的补访项中，直接影响本工程下一步的两项：
 
